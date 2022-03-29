@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.4px;
+  margin: 0 20px 0 20px;
+}
+
+.header {
+  text-align: left;
+  background: white;
+  color: black;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 10vw;
+  margin: 0;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  color: black;
+  border-color: black;
+  border-style: groove;
+  border-width: 1px;
+  padding: 15px;
+  margin: 10px;
+  text-decoration: none;
+  text-align: left;
+  flex: 1;
+}
+
+.navbar a:hover {
+  background-color: black;
+  color: white;
+}
+
+.navbar a:active {
+  background-color: black;
+  color: white;
+}
+
+.navbar a.active {
+  background-color: black;
+  color: white;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+/* Main column */
+.main {
+  background-color: white;
+  padding: 0 15px 0 15px;
+  flex: 70%;
+  border-color: black;
+  border-style: groove;
+  border-width: 1px;
+}
+
+#black {
+  background-color: black;
+  padding: 0 15px 0 15px;
+  flex: 70%;
+  border-color: black;
+  border-style: groove;
+  border-width: 1px;
+}
+
+/* Sidebar/left column */
+.side {
+  padding: 0 15px 0 15px;
+  border-color: black;
+  border-style: groove;
+  border-width: 1px;
+  margin-left: 20px;
+  flex: 20%;
+  height: 50%;
+}
+
+.desktop {
+  width: 50%;
+  border-color: black;
+  border-style: groove;
+  border-width: 0.25px;
+  margin-top: 15px;
+}
+
+.mobile {
+  width: 20%;
+  border-color: black;
+  border-style: groove;
+  border-width: 0.25px;
+  margin-top: 15px;
+}
+
+/* footer */
+.footer {
+  padding: 10px;
+  text-align: left;
+}
+
+/* RESPONSIVE */
+/* tablet */
+@media (max-width: 780px) {
+  .side {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+/* When the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row, .navbar {
+    flex-direction: column;
+  }
+
+  .main {
+    order: 1;
+    margin: 0;
+  }
+
+  .side {
+    order: 2;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
